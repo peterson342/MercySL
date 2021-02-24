@@ -1,0 +1,9 @@
+---
+- name: Verify Apache service
+  hosts: labservers
+  tasks:
+  - name: Ensure webserver is reachable
+    uri:
+      url: http://ansiblelab5
+      status_code: 200
+...

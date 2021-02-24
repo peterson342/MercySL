@@ -4,6 +4,9 @@
   tasks:
   - name: Remove httpd package
     yum:
-      name: httpd
+      name: "{{ item }}"
       state: absent
+    loop:
+      - httpd
+      - firewalld
 ...
