@@ -1,0 +1,8 @@
+---
+- name: install ad
+  hosts: windows2012
+  gather_facts: false
+
+  roles:
+    - winad
+...
